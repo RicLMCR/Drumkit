@@ -44,3 +44,13 @@ document.addEventListener("keydown", (event) =>{
         sound6.play();
     }
 })
+
+document.addEventListener("mouseup", (event) =>{
+    if (sound1){
+    sound1.pause();
+}
+else if (sound2){
+    sound2.pause();
+}
+
+})

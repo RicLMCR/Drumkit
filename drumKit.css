@@ -13,8 +13,15 @@
 
 body{
     box-sizing: border-box;
-    background-image: linear-gradient(var(--charcole), var(--hotPink), var(--charcole));
+    /* background-image: linear-gradient(var(--charcole), var(--hotPink), var(--charcole)); */
+    background-color: var(--charcole);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    color: white;
+    font-weight: 700;
+    text-align: center;
 }
 
 #container{
@@ -50,13 +57,24 @@ body{
     background-color: var(--elecBlue);
     z-index: 3;
     border-radius: 25px;
+}
 
+#dials{
+    color: var(--elecBlue);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.fa-circle-dot{
+    padding: 3vh;
 }
 
 /* Buttons //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 #buttonContainer{
-    width:30vh;
+    /* width:30vh; */
     height: 20vh;
     margin: 4vh 0 0 1vh;
 }
@@ -98,7 +116,7 @@ body{
     height: 75vh;
     background-color: var(--charcole);
     z-index: 2;
-    transition: box-shadow .2s;
+    transition: box-shadow, background-color .5s;
 }
 
 .key1:hover{
@@ -110,16 +128,8 @@ body{
 }
 
 .key1:active{
-    border-right: 4px solid var(--elecBlue);
-    animation-name: key1;
-    animation-duration: 2s;
     z-index: 3;
-}
-
-@keyframes key1{
-    0%{background-image: linear-gradient(var(--elecBlue), var(--hotPink), var(--elecBlue));}
-    50%{background-image: linear-gradient(var(--hotPink), var(--elecBlue), var(--hotPink));}
-    100%{background-image: linear-gradient(var(--elecBlue), var(--hotPink), var(--elecBlue));}
+    background-color: var(--elecBlue);
 }
 
 #key1{
@@ -135,6 +145,7 @@ body{
 }
 
 #key4{
+
 }
 
 #keyContainer2{
@@ -151,7 +162,7 @@ body{
     background-color: var(--elecBlue);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    transition: box-shadow .2s;
+    transition: box-shadow, background-color .5s;
 }
 
 .key2:hover{
@@ -159,15 +170,9 @@ body{
 }
 
 .key2:active{
-    box-shadow: 0 5px 15px var(--elecBlue);
-    animation-name: key2;
-    animation-duration: 2s;
-}
-
-@keyframes key2{
-    0%{background-image: linear-gradient(var(--elecBlue), var(--hotPink), var(--elecBlue));}
-    50%{background-image: linear-gradient(var(--hotPink), var(--elecBlue), var(--hotPink));}
-    100%{background-image: linear-gradient(var(--elecBlue), var(--hotPink), var(--elecBlue));}
+    box-shadow: 0 5px 15px var(--hotPink);
+    z-index: 3;
+    background-color: var(--hotPink);
 }
 
 #key5{
@@ -183,3 +188,5 @@ body{
 /* background
 keyboard background
 animation transition
+addition JS to stop sounds on keyup
+different JS code???
